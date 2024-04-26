@@ -1,0 +1,21 @@
+name = "mythlabs-backend"
+compatibility_date = "2023-12-01"
+
+ [vars]
+DATABASE_URL="prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiMmY3YjU4ZDgtMWFhOC00MzYwLWE3ZDktMTRiMmI4MTJjZDA4IiwidGVuYW50X2lkIjoiYjdjNjg3YzFjMTY0MTgwYTk0ODEzZmJiZjQ1NWQ5ODJmYWJjMTk0MDVmYTA0N2EwNGVkZWZlNzMzZmM5NjdiNyIsImludGVybmFsX3NlY3JldCI6IjE1ZWExMWY2LTRiMjgtNDcwNC1hYWJkLWUyZDliN2U1NWU2ZSJ9.77RWK46DoOmgo3BjvCHBnBpeGUo_Efpt5_ZqifDOMOg"
+SECRET_KEY = "ajdskfjklsdnfoewijr9238490834kwnflkjw932u4923kjkfj"
+# [[kv_namespaces]]
+# binding = "MY_KV_NAMESPACE"
+# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# [[r2_buckets]]
+# binding = "MY_BUCKET"
+# bucket_name = "my-bucket"
+
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "my-database"
+# database_id = ""
+
+# [ai]
+# binding = "AI"
