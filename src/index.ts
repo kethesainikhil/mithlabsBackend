@@ -173,6 +173,25 @@ app.get('/listAllHotels', async (c) => {
     return c.json({msg: error})
   }
 })
+app.get('/listAllHotelInteractions', async (c) => {
+  const { DATABASE_URL } = env<{ DATABASE_URL: string }>(c)
+
+  const prisma = new PrismaClient({
+      datasourceUrl: DATABASE_URL,
+  }).$extends(withAccelerate())
+
+
+  try {
+    const combinedData = await prisma.hotels.findMany({
+      include: {
+        details: true
+      }
+    });
+    return c.json({data:combinedData})
+  } catch (error) {
+    return c.json({msg: error})
+  }
+})
 app.get('/findHotelById/:id', async (c) => {
   const hotel_id = parseInt( c.req.param("id"));
 
