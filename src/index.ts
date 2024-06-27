@@ -8,14 +8,10 @@ import { setCookie } from 'hono/cookie'
 import { deleteCookie } from 'hono/cookie'
 const app = new Hono()
 
-app.use('/*', cors(
-  {
-    origin:"*",
-    exposeHeaders: ['Set-Cookie'],
-    allowHeaders: ['Content-Type', 'Authorization', 'Set-Cookie'],
-    credentials: true
-  }
-))
+app.use('/*', cors({
+  origin:["http://localhost:5173","https://mythlabs.vercel.app"],
+  credentials:true
+}))
 
 
 // app.use(
